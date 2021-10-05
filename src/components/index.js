@@ -6,3 +6,4 @@ export * from './Nav';
 export * from './AppLayout';
 export * from './Home';
 export * from './About';
+export * from './Logo';

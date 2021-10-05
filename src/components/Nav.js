@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import { Home, About } from '.';
+import { Home, About, Logo } from '.';
 
 const Wrapper = styled.nav`
     position: fixed;
@@ -30,7 +30,9 @@ export const Nav = () => {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/"><img src="" alt="logo" /></Link>
+                        <Link to="/">
+                           <Logo />
+                        </Link>
                     </li>
                     <li>
                         <Link to="/"><Home /></Link>

@@ -2,6 +2,8 @@ import {useState, useRef, useEffect} from 'react';
 import { Button, TestQuestions, TestQuestionOptions } from ".";
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Wrapper = styled.div`
     display: inline-flex;
@@ -18,7 +20,6 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
     const history = useHistory();
     const [selectedOption, setSelectedOption] = useState([]);
     const [ assessmentScore, setAssessmentScore ] = useState(0);
-    const [proceedBtn, setProceedBtn] = useState({ index: 0});
     const [btnState, setBtnState] = useState(true)
     //const [lessonPath, setLessonPath] = useState([path])
 
@@ -65,13 +66,11 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
         if(initialMount.current){
             initialMount.current = false;
         }else{
-            if(assessmentScore === cutOffMark){
-                alert("success!", assessmentScore);
+            if(assessmentScore === cutOffMark){                
+                toast.success("Just a guru doing guru things, keep it up!");
                 setBtnState(false);
-                //history.push('/lessons/primary-two');
-                //setTopicIndex(indexCounter);
             }else{                
-                alert("try again!",assessmentScore)
+                toast.error("So close! try again Guru");
                 window.scrollTo(0,0);
             }                
             setSelectedOption([]);      
@@ -115,8 +114,10 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
         </div> 
         <Wrapper>
             <Button handleSubmit={handleClick}>Submit</Button>
-            <Button handleSubmit={handleProceed} disabled={btnState}>Next lesson &rarr;</Button>
+            <Button handleSubmit={handleProceed} primary disabled={btnState}>Next lesson &rarr;</Button>
         </Wrapper>
+        
+        <ToastContainer position="top-center" autoClose={3000} />
     </div>
    ) ;
 };

@@ -5,7 +5,7 @@ const Wrapper = styled.span`
     .about{        
         position: absolute;
         right: 100px;
-        padding: 10px;
+        padding: 20px 12px;
         color: #08b9bf;
         transition: .1s linear;
     }
