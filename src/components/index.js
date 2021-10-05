@@ -3,7 +3,6 @@ export * from './TestQuestions';
 export * from './Button';
 export * from './Lesson';
 export * from './Nav';
-export * from './Footer';
 export * from './AppLayout';
 export * from './Home';
 export * from './About';

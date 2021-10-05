@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    margin: 0;
+    position: relative;
+    right: 45px;
 `
 
 export const TestQuestionOptions = ({optionValue, name, checked }) => {

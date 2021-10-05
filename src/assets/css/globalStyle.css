@@ -1,0 +1,18 @@
+html,
+body, button {
+    font-family: 'Josefin Sans' !important;
+    margin: 0;
+    height: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+
+ul>li{
+    list-style: none;
+}
+
+a {    
+    text-decoration: none;
+}
+

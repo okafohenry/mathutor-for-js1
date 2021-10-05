@@ -1,7 +1,7 @@
 import {AppLayout, Lesson} from '../../components';
 import {Route, Switch, useRouteMatch,} from 'react-router-dom';
 
-const tutorClass = "Primary 1";
+const tutorClass = "Js 1";
 const scheme = [
     {
         id: 1,
@@ -95,7 +95,7 @@ export const JsOneLessonPage = () => {
                     <Lesson 
                         pupilClass={tutorClass} 
                         data={scheme[2]} 
-                        nextpath={"/lessons/primary-two/lesson-one"}/>
+                        nextpath={"/advance"} />
                 </Route>        
             </Switch> 
         </AppLayout>
