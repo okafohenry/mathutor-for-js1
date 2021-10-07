@@ -5,33 +5,33 @@ const tutorClass = "Js 1";
 const scheme = [
     {
         id: 1,
-        topic: "How to check a radio button using JavaScript?",
-        text: "A radio button is an icon that is used in forms to take input from the user. It allows the users to choose one value from the group of radio buttons.  Radio buttons are basically used for the single selection from multiple ones, which is mostly used in GUI forms.You can mark/check only one radio button between two or more radio buttons. In this chapter, we will guide you on how to check a radio button using the JavaScript programming language.  For this, first we design a form containing radio buttons using HTML, and then we will use JavaScript programming to check the radio button. We will also check which radio button value is selected.",
-        img: "",
+        topic: "NUMBER SYSTEM\n(Roman Numerals)",
+        text: "There were many ancient ways of writing numbers, part of which are the Hindu Arabic system, Tally system, Roman e.t.c. While so many have gone into extinction, the roman numerals are still in use till date.\n  The Roman system was developed about 300BC. The Romans used capital letters of the alphabet for numerals as illustrated in the table below",
+        img: "https://res.cloudinary.com/okafohenrie/image/upload/v1633555147/roman-numerals-1-1000_z8hmn9.png",
         assessment: [
             {
-                question: "Question 1",
-                options: ["option 1", "option 2", "option 3" ],
-                answer: "option 1"
+                question: "What number does these Roman numerals represent?\n XLVI and MMMDCI",
+                options: ["99 and 2954", "46 and 3601", "99 and 3602" ],
+                answer: "46 and 3601"
             },
             {
-                question: "Question 2",
-                options: ["option 1", "option 2", "option 3" ],
-                answer: "option 2"
+                question: "Write 2011 in Roman numeral",
+                options: ["MMDCI", "MMXI", "MMCM" ],
+                answer: "MMXI"
             },
             {           
-                question: "Question 3",
-                options: ["option 1", "option 2", "option 3" ],
-                answer: "option 3"
+                question: "Calculate C + LV and select the correct answer",
+                options: ["155", "150", "105" ],
+                answer: "155"
             }
         ]
 
     },
     {
         id: 2,
-        topic: "Check a radio button",
-        text: "We do not need to write any specific code to check the radio button. They can be checked once they are created or specified in HTML form.However, we have to write the JavaScript code to get the value of the checked radio button, which we will see in the chapter below:",
-        img: "",
+        topic: "Order of Mathematical Operations (PENDAS/BODMAS)",
+        text: `In arithmetic, there are two types of components: the numbers themselves and the  operators (also called operations) that tell you what to do with those numbers. The basic operators in arithmetic are addition (sum), subtraction (difference), multiplication (product) and division (quotient). \n So, in the sum of 7 x 3 + 5 there are three numbers; 7, 3 and 5 and two operators, a multiplication(x) and an addition (+). the order of operations used throughout mathematics, science, technology and many computer programming languages is expressed here. \n\n 1. Exponents (index) and roots\n 2. Multiplication and division\n 3. Addition and subtraction\n\n The definitive order of operations is summed up in the acronymBODMAS which stands for Brackets, Order, Divide, Multiply, Add, Subtract. it would be easier if BODMAS was recognised worldwide, but unfortunately it isn't. In the USA it is usually called PEMDAS (Parenthesis, Exponent, MUltiply, Divide, Add, Subtract). Canadians sit in the middle with BEMDAS (Brackets,Exponent, Multiply, Divide, Add, Subtract). Regardless of the exact terminology, the sequence remains the same.`,
+        img: "https://res.cloudinary.com/okafohenrie/image/upload/v1633555147/download_mqkaz8.png",
         assessment: [
             {          
                 question: "Question 1",

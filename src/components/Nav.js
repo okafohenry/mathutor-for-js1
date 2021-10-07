@@ -21,6 +21,17 @@ const Wrapper = styled.nav`
         margin-left: 50px;
         padding: 0;
     }
+    
+    .about{        
+        position: absolute;
+        right: 100px;
+        padding: 20px 12px;
+        color: #08b9bf;
+        transition: .1s linear;
+    }
+    .about:hover{
+        border-bottom: 3px solid #08b9bf;
+    }
 `
 
 
@@ -38,7 +49,9 @@ export const Nav = () => {
                         <Link to="/"><Home /></Link>
                     </li>
                     <li>
-                        <Link to="/about"><About /></Link>
+                        <Link to="/about">
+                        <span className="about">About</span>
+                        </Link>
                     </li>
                 </ul>
             </nav>

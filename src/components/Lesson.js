@@ -14,6 +14,15 @@ const Wrapper = styled.div`
         margin-left: 30px;
     }
 `
+const Container = styled.div`
+    h3{
+        color:  #08b9bf;
+    }
+    .text {
+        text-align: justify;
+        padding-bottom: 15px;
+    }
+`
 
 
 export const Lesson = ({data, nextpath, pupilClass}) => {
@@ -86,32 +95,34 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
 
 
    return(
-    <div>        
-        <h2>{`${pupilClass} Lesson Page `}</h2>
-        <h3>{data.topic}</h3>
-        <p>{data.text}</p>
-        <img src={data.image} alt={`${data.topic}`} />
-        <div>
-            <h3>Assessment</h3>
-            <ol>
-                {data.assessment.map(item => ( 
-                    <li key={item.id}>
-                        <TestQuestions question={item.question} />
-                        <div onChange={handleOptionChange}>
-                            <ul>
-                                {item.options.map(option => (
-                                    <li key={item.id}>
-                                        <TestQuestionOptions 
-                                            optionValue={option}  
-                                            name={item.question} />
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </li>
-                ))}
-            </ol>
-        </div> 
+    <div>  
+        <Container>      
+            <h2>{`${pupilClass} Lesson Page `}</h2>
+            <h3>{data.topic}</h3>
+            <div className="text">{data.text}</div>
+            <img src={data.img} alt={`${data.topic}`}  height="300px" width="500px"/>
+            <div>
+                <h3>Assessment</h3>
+                <ol>
+                    {data.assessment.map(item => ( 
+                        <li key={item.id}>
+                            <TestQuestions question={item.question} />
+                            <div onChange={handleOptionChange}>
+                                <ul>
+                                    {item.options.map(option => (
+                                        <li key={item.id}>
+                                            <TestQuestionOptions 
+                                                optionValue={option}  
+                                                name={item.question} />
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </li>
+                    ))}
+                </ol>
+            </div> 
+        </Container>
         <Wrapper>
             <Button handleSubmit={handleClick}>Submit</Button>
             <Button handleSubmit={handleProceed} primary disabled={btnState}>Next lesson &rarr;</Button>
