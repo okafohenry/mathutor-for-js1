@@ -15,12 +15,18 @@ const Wrapper = styled.div`
     }
 `
 const Container = styled.div`
-    h3{
+    h2{
+       text-align: center;
+       padding-bottom: 30px; 
+    }
+    h2, h3{
         color:  #08b9bf;
     }
     .text {
         text-align: justify;
-        padding-bottom: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        line-height: 2rem;
     }
 `
 
@@ -99,8 +105,10 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
         <Container>      
             <h2>{`${pupilClass} Lesson Page `}</h2>
             <h3>{data.topic}</h3>
-            <div className="text">{data.text}</div>
+            <h4>{data.subTopic}</h4>
+            <div className="text">{data.text1}</div>
             <img src={data.img} alt={`${data.topic}`}  height="300px" width="500px"/>
+            <div className="text">{data.text2}</div>
             <div>
                 <h3>Assessment</h3>
                 <ol>
