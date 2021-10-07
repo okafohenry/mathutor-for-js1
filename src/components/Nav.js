@@ -35,7 +35,7 @@ const Wrapper = styled.nav`
 `
 
 
-export const Nav = () => {
+export const Nav = (props) => {
     return(
         <Wrapper>
             <nav>
@@ -50,7 +50,7 @@ export const Nav = () => {
                     </li>
                     <li>
                         <Link to="/about">
-                        <span className="about">About</span>
+                            <span className="about">About</span>
                         </Link>
                     </li>
                 </ul>

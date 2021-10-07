@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 `
 
 
-export const AppLayout = ({children}) => {
+export const AppLayout = ({ children}) => {
     return(
         <Wrapper>
             <Nav />

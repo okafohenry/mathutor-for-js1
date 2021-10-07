@@ -1,6 +1,8 @@
 import {AppLayout, Lesson} from '../../components';
 import {Route, Switch, useRouteMatch,} from 'react-router-dom';
 
+
+
 const tutorClass = "Js 1";
 const scheme = [
     {
@@ -56,28 +58,29 @@ const scheme = [
     }, 
     {
         id: 3,
-        topic: "Basic Operations on Whole Numbers (Multiplication and Division)",
-        subTopic: "PENDAS/ BODMAS",
-        text1: "The querySelector() function is a DOM method of JavaScript. This method is used to get the element that matches with the specified CSS selector in the document. Remember you need to specify the name property of the radio button in HTML code.",
-        img: "",
+        topic: "Number Base",
+        subTopic: "Counting in Base 2",
+        text1: "A number base is the number of digits or combination of digits that a system of counting uses to represent numbers. A base can be any whole number greater than 0. The most commonly used number system is the decimal system, commonly known as base 10. Its popularity as a system of counting is most likely due to the fact that we have 10 fingers. The base of any number may be written beside the number. For example, 178 is read as 17 base 8, which is 15 in base 10.",
+        img: "https://res.cloudinary.com/okafohenrie/image/upload/v1633603277/number_system___fd38n1.png",
+        text2: "Consider how counting works in the decimal system. We start with 1 digit. We count using the numerals 0 through 9. After we reach 9, we've run out of numerals. So, we have to add a second digit. We start that digit at 1. Then we cycle the first digit through the numerals 0 through 9 again, to create the numbers 10-19. After we reach 19, we've run out of numerals in the \"1's place\" again, so we increment the second digit to 2. Eventually, we reach 99. We've run out of numerals in the \"1's\" place, so we want to increment the second digit again. But, now we've run out of numerals for the second digit as well. So, we have to introduce a 3rd digit, and we start it at 1.\n And so on Counting using binary numbers works the same way, except that we only have 2 numerals (1 and 0) for each digit. So, we start with 1 digit. We count using the numerals 0 through 1: 0 & 1, We are already out of numerals. So, we have to add a second digit. We start that digit at 1, and then we can cycle the first digit through the numerals 0 through 1 again: 10 & 11",
         assessment: [
         {
-            question: "if one orange cost 6kobo, how many will a trader buy with N120?",
-            options: ["160", "200", "2000" ],
-            answer: "2000"
+            question: "What is h=the decimal value of 1111 1110",
+            options: ["239", "None of these options", "255" ],
+            answer: "None of these options"
         },
         {
-            question: "Solve 7 - (-8) + (-8)",
-            options: ["7","8", "24" ],
-            answer: "7"
+            question: "A number of base is the method we use to display and process number. Since we have 10 fingers we probably developed our number system based on 10 different digits. What digits are used in the octal system? Octal means eight.",
+            options: ["1-8","0-7", "1-7" ],
+            answer: "0-7"
         },
         {
-            question: "Simplify (+6) - (-4)",
-            options: ["2", "10", "6/4" ],
-            answer: "10"
+            question: "Convert 100(base 2) to base 10",
+            options: ["6", "10", "4" ],
+            answer: "4"
         }]
     }
-]
+] 
 
 export const JsOneLessonPage = () => {
     let { path } = useRouteMatch();
