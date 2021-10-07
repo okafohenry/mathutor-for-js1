@@ -57,7 +57,7 @@ const Grid = styled.div`
         line-height: 2rem;
     }
     .sub-msg{
-        color: #5555;
+        color: #9e9e9e;
     }
     .msg-main{
         color: #08b9bf;
