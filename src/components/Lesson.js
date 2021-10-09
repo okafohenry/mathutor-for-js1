@@ -82,11 +82,14 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
             initialMount.current = false;
         }else{
             if(assessmentScore === cutOffMark){                
-                toast.success("Just a guru doing guru things, keep it up!");
+                toast.success("Bravo! proceed to next lesson");
                 setBtnState(false);
             }else{                
-                toast.error("So close! try again Guru");
-                window.scrollTo(0,0);
+                toast.error("Try again Guru");
+                setTimeout(() => {
+                    window.location.reload();
+                    window.scrollTo(0,0);   
+                }, 4800 );
             }                
             setSelectedOption([]);      
         }
@@ -96,6 +99,7 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
     const handleProceed = () => {
         if(assessmentScore === cutOffMark){
             history.push(nextpath);
+            window.location.reload();
         }
     }
 
@@ -136,7 +140,7 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
             <Button handleSubmit={handleProceed} primary disabled={btnState}>Next lesson &rarr;</Button>
         </Wrapper>
         
-        <ToastContainer position="top-center" autoClose={3000} />
+        <ToastContainer position="top-center" autoClose={5000} />
     </div>
    ) ;
 };
