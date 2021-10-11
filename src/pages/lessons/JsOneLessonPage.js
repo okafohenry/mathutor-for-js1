@@ -27,6 +27,16 @@ const scheme = [
                 question: "Calculate C + LV and select the correct answer",
                 options: ["155", "150", "105" ],
                 answer: "155"
+            },
+            {           
+                question: "10 + 14 = ____?",
+                options: ["XXVI", "XXIV", "XIV" ],
+                answer: "XXIV"
+            },
+            {           
+                question: "25 x 4 = ____?",
+                options: ["C", "D", "M" ],
+                answer: "C"
             }
         ]
 
@@ -53,6 +63,16 @@ const scheme = [
                 question: "-359 + 469 = ?",
                 options: ["110", "-110", "828" ],
                 answer: "110"
+            },
+            {
+                question: "(2 x 3) / 3 - 2 = ",
+                options: ["1", "0", "2" ],
+                answer: "0"
+            },
+            {
+                question: " 9 / 3 x 4 + 13 = ",
+                options: ["51", "20", "25" ],
+                answer: "25"
             }
         ]
     }, 

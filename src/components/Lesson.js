@@ -35,7 +35,8 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
     const history = useHistory();
     const [selectedOption, setSelectedOption] = useState([]);
     const [ assessmentScore, setAssessmentScore ] = useState(0);
-    const [btnState, setBtnState] = useState(true)
+    const [btnState, setBtnState] = useState(true);
+    const [failed, setFailed] = useState([]);
     //const [lessonPath, setLessonPath] = useState([path])
 
     const handleOptionChange = (e) => {
@@ -55,6 +56,7 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
 
     const handleClick = () => {
         let counter = 0;
+        let failedQuestions = [];
         
         if(selectedOption.length < 3){
             console.log("not upto 3");
@@ -65,6 +67,9 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
                     if(data.assessment[i].question === selectedOption[j].name){
                         if(selectedOption[j].value === data.assessment[i].answer){ 
                             counter = counter + 1;
+                        }else{
+                            failedQuestions.push(i + 1);
+                            setFailed(failedQuestions);
                         }
                     }
                 }
@@ -75,7 +80,7 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
         //set radio button to default unchecked 
     }
 
-    const cutOffMark =  3;
+    const cutOffMark =  5;
     const initialMount = useRef(true);
     useEffect(() => {
         if(initialMount.current){
@@ -85,7 +90,7 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
                 toast.success("Bravo! proceed to next lesson");
                 setBtnState(false);
             }else{                
-                toast.error("Try again Guru");
+                toast.error(`Try again Guru.\nYou failed ${failed.length} questions. Question ${failed}` );
                 setTimeout(() => {
                     window.location.reload();
                     window.scrollTo(0,0);   
@@ -94,7 +99,7 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
             setSelectedOption([]);      
         }
        
-    }, [history, cutOffMark, assessmentScore]);
+    }, [history, cutOffMark, assessmentScore, failed]);
 
     const handleProceed = () => {
         if(assessmentScore === cutOffMark){
@@ -140,7 +145,7 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
             <Button handleSubmit={handleProceed} primary disabled={btnState}>Next lesson &rarr;</Button>
         </Wrapper>
         
-        <ToastContainer position="top-center" autoClose={5000} />
+        <ToastContainer position="top-center" autoClose={7000} />
     </div>
    ) ;
 };
