@@ -84,23 +84,106 @@ const scheme = [
         img: "https://res.cloudinary.com/okafohenrie/image/upload/v1633603277/number_system___fd38n1.png",
         text2: "Consider how counting works in the decimal system. We start with 1 digit. We count using the numerals 0 through 9. After we reach 9, we've run out of numerals. So, we have to add a second digit. We start that digit at 1. Then we cycle the first digit through the numerals 0 through 9 again, to create the numbers 10-19. After we reach 19, we've run out of numerals in the \"1's place\" again, so we increment the second digit to 2. Eventually, we reach 99. We've run out of numerals in the \"1's\" place, so we want to increment the second digit again. But, now we've run out of numerals for the second digit as well. So, we have to introduce a 3rd digit, and we start it at 1.\n And so on Counting using binary numbers works the same way, except that we only have 2 numerals (1 and 0) for each digit. So, we start with 1 digit. We count using the numerals 0 through 1: 0 & 1, We are already out of numerals. So, we have to add a second digit. We start that digit at 1, and then we can cycle the first digit through the numerals 0 through 1 again: 10 & 11",
         assessment: [
-        {
-            question: "What is h=the decimal value of 1111 1110",
-            options: ["239", "None of these options", "255" ],
-            answer: "None of these options"
-        },
-        {
-            question: "A number of base is the method we use to display and process number. Since we have 10 fingers we probably developed our number system based on 10 different digits. What digits are used in the octal system? Octal means eight.",
-            options: ["1-8","0-7", "1-7" ],
-            answer: "0-7"
-        },
-        {
-            question: "Convert 100(base 2) to base 10",
-            options: ["6", "10", "4" ],
-            answer: "4"
-        }]
+            {
+                question: "What is h=the decimal value of 1111 1110",
+                options: ["239", "None of these options", "255" ],
+                answer: "None of these options"
+            },
+            {
+                question: "A number of base is the method we use to display and process number. Since we have 10 fingers we probably developed our number system based on 10 different digits. What digits are used in the octal system? Octal means eight.",
+                options: ["1-8","0-7", "1-7" ],
+                answer: "0-7"
+            },
+            {
+                question: "Convert 100(base 2) to base 10",
+                options: ["6", "10", "4" ],
+                answer: "4"
+            },
+            {
+                question: "3 + 3 = _____?",
+                options: ["100", "101", "110" ],
+                answer: "110"
+            },
+            {
+                question: "Convert 3 to binary",
+                options: ["10", "11", "101" ],
+                answer: "11"
+            }
+        ]
+    }, 
+    {
+        id: 4,
+        topic: "Fraction",
+        subTopic: "What is a fraction?",
+        text1: "Fractions represent equal parts of a whole or a collection. Fraction of a whole: When we divide a whole into equal parts, each part is a fraction of the whole. For example:",
+        img: "https://res.cloudinary.com/okafohenrie/image/upload/v1633970179/1564734717_1_n9mtv9.png",
+        text2: "Fraction Notation: A fraction has two parts. The number on the top of the line is called the numerator. It tells how many equal parts of the whole or collection are taken.  The number below the line is called the denominator.  It shows the total divisible number of equal parts the whole into or the total number of equal parts which are there in a collection. ",
+        assessment: [
+            {
+                question: "Which of these represents a fraction?",
+                options: ["1/3", "None of these options", "1.3" ],
+                answer: "1/3"
+            },
+            {
+                question: "Show \"half\" as a fraction",
+                options: ["1/3","1/4", "1/2" ],
+                answer: "1/2"
+            },
+            {
+                question: "The number above in a fraction is called?",
+                options: ["fraction", "numerator", "denominator" ],
+                answer: "numerator"
+            },
+            {
+                question: "The number below in a fraction is called?",
+                options: ["fraction", "numerator", "denominator" ],
+                answer: "denominator"
+            },
+            {
+                question: "\"Quarter?\" can be represent as",
+                options: ["1/2", "1/3", "1/4" ],
+                answer: "1/4"
+            }
+        ]
+    }, 
+    {
+        id: 5,
+        topic: "Fraction",
+        subTopic: "Addition of fractions",
+        text1: "Step 1: Make sure the bottom numbers (the denominators) are the same.  Step 2: Add the top numbers (the numerators), put that answer over the denominator.  Step 3: Simplify the fraction (if possible)",
+        img: "https://res.cloudinary.com/okafohenrie/image/upload/v1633972030/Screenshot_2021-10-11_17.44.51_pdglpy.png",
+        text2: "Consider the image above, you have to first make sure the denominators are the same, add numerators and simplify the fraction.",
+        assessment: [
+            {
+                question: "1/4 + 1/4 = _____",
+                options: ["1/2", "1/3", "1/4" ],
+                answer: "1/2"
+            },
+            {
+                question: "\"half\" + \"half\" ?",
+                options: ["1/2","1", "None of the above" ],
+                answer: "1"
+            },
+            {
+                question: "3/8 + 4/8 = ____?",
+                options: ["7/4", "6/8", "7/8" ],
+                answer: "7/8"
+            },
+            {
+                question: "2/4 + 1/4 + 1/4 = ____?",
+                options: ["1/4", "1", "1/2" ],
+                answer: "1"
+            },
+            {
+                question: "4/10 + 6/10 = ____?",
+                options: ["1/2", "1/3", "1" ],
+                answer: "1"
+            }
+        ]
     }
 ] 
+
+
 
 export const JsOneLessonPage = () => {
     let { path } = useRouteMatch();
@@ -123,6 +206,18 @@ export const JsOneLessonPage = () => {
                     <Lesson 
                         pupilClass={tutorClass} 
                         data={scheme[2]} 
+                        nextpath={`${path}/lesson-four`}/>
+                </Route> 
+                <Route path={`${path}/lesson-four`}>
+                    <Lesson 
+                        pupilClass={tutorClass} 
+                        data={scheme[3]} 
+                        nextpath={`${path}/lesson-five`}/>
+                </Route> 
+                <Route path={`${path}/lesson-five`}>
+                    <Lesson 
+                        pupilClass={tutorClass} 
+                        data={scheme[4]} 
                         nextpath={"/advance"} />
                 </Route>        
             </Switch> 
