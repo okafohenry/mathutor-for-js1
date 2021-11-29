@@ -1,5 +1,5 @@
 import {useState, useRef, useEffect} from 'react';
-import { Button, TestQuestions, TestQuestionOptions } from ".";
+import { Button,NextButton, TestQuestions, TestQuestionOptions } from ".";
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
 import {ToastContainer, toast} from 'react-toastify';
@@ -7,19 +7,17 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Wrapper = styled.div`
     display: inline-flex;
-    width: 70%;
-    gap: 150px;
-
-    .nextlesson{
-        margin-left: 30px;
-    }
-
+    width: 100%;
+    gap: 50px;    
+    
     @media only screen and (max-width: 500px) {
         width: 0;
         display: inline;     
     }
     
 `
+
+
 const Container = styled.div`
     h2{
        text-align: center;
@@ -154,7 +152,7 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
         </Container>
         <Wrapper>
             <Button handleSubmit={handleClick}>Submit</Button>
-            <Button handleSubmit={handleProceed} primary disabled={btnState}>Next lesson &rarr;</Button>
+            <NextButton handleSubmit={handleProceed}  disabled={btnState}>Next lesson &rarr;</NextButton>
         </Wrapper>
         
         <ToastContainer position="top-center" autoClose={7000} />

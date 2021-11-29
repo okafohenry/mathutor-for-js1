@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button } from "../../components";
+import { Button, NextButton } from "../../components";
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -129,7 +129,7 @@ export const LandingPage = () => {
                         It will be an exciting ride, so get in, Let's do this together!</span>
                         </h2>
                         <Link to='/classroom/lesson-one'>
-                            <Button>Get Started &rarr;</Button>
+                            <NextButton>Get Started &rarr;</NextButton>
                         </Link>
                     </div>                    
                 </div> 
