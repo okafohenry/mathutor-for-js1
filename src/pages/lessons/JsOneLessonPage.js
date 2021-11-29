@@ -14,7 +14,7 @@ const scheme = [
         text2: "Conversion Rules: When the symbol has a greater value than the symbol after it, add the symbols, such as: XI = X + I = 10 + 1 = 11. When the symbol has a lesser value than the symbol after it, subtract the symbol with the lesser value from the symbol with the greater value: IX = X – I = 10 - 1 = 9. When the symbols have equal value, add them: XX = X + X = 10 + 10 = 20.",
         assessment: [
             {
-                question: "What number does these Roman numerals represent?\n XLVI and MMMDCI",
+                question: "What numbers do these Roman numerals represent?\n XLVI and MMMDCI",
                 options: ["99 and 2954", "46 and 3601", "99 and 3602" ],
                 answer: "46 and 3601"
             },
