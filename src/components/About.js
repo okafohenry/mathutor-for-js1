@@ -17,7 +17,7 @@ export const About = () => {
                 <div className="about">
                     <h2>About Guru</h2>
                     <p>
-                    Guru is an learning Management System for teaching mathematics to Junior Secondary school, focusing primarily on Js1.
+                    Guru is an online learning Management System for teaching mathematics to Junior Secondary school, focusing primarily on Js1.
                     This project is orginally a final year academic project
                     </p>
                 </div>
