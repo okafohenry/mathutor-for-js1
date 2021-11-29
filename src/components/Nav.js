@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import { Home, About, Logo } from '.';
+import { Home, Logo } from '.';
 
 const Wrapper = styled.nav`
     position: fixed;
@@ -17,10 +17,6 @@ const Wrapper = styled.nav`
             padding: 5px;
         }
     }
-    .logo {
-        margin-left: 50px;
-        padding: 0;
-    }
     
     .about{        
         position: absolute;
@@ -32,6 +28,16 @@ const Wrapper = styled.nav`
     .about:hover{
         border-bottom: 3px solid #08b9bf;
     }
+    
+    @media only screen and (max-width: 500px) {
+        .logo {
+           position: relative;
+        }   
+        .about {
+            right: 30px;
+        }
+    }
+    
 `
 
 

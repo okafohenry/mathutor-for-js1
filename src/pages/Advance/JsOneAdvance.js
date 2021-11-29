@@ -24,6 +24,7 @@ export const JsOneAdvance = () => {
         <Wrapper>
              <div className="img-txt">
                 <img src={process.env.PUBLIC_URL + '/images/burst_trophy_dribbble.gif'}
+                alt="trophy.gif"
                 height="200px"
                 width="250px" />
                 <h4>Great Work Champ!</h4>

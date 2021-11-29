@@ -2,8 +2,8 @@ import {Nav} from '.';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-      .container{
-        height: 60%;;
+    .container{
+        height: 60%;
         width: 50%;
         padding: 30px;
         margin-left: auto;
@@ -14,6 +14,11 @@ const Wrapper = styled.div`
 
         font-size: 16px;
         line-height: 1.2rem;
+    }
+    @media only screen and (max-width: 500px) {
+        .container{
+            width: 360px;
+        }
     }
 `
 

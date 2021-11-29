@@ -21,6 +21,16 @@ const Wrapper = styled.div`
             top: -5px;
         }
     }
+    
+    @media only screen and (max-width: 500px) {
+        nav{
+            .logo{
+                margin-left: 20px;
+                margin-top: 5px;
+            }
+        }
+    }
+    
 `
 
 
@@ -62,6 +72,37 @@ const Grid = styled.div`
     .msg-main{
         color: #08b9bf;
     }
+
+    @media only screen and (max-width: 500px) {
+        .grid-item1{
+            width: 360px;
+            height: 320px;
+            padding: 0;
+
+            img{
+                width: 100%;
+                height: 350px;
+                margin-top: 70px;
+                position: relative;
+                left: 15px;
+            }
+        }
+        .grid-item2 {
+            width: 360px;
+            height: 350px;
+            padding: 0;
+            position: relative;
+            top: 180px;
+            left: 175px;
+
+            .msg{
+                width: 80%;
+                font-size: 13px;
+                line-height: 1.5rem;
+            }
+        }
+    }
+
 `
 
 export const LandingPage = () => {
@@ -69,7 +110,7 @@ export const LandingPage = () => {
         <Wrapper>        
             <nav>
                 <div className="logo">
-                <img 
+                    <img 
                         src={process.env.PUBLIC_URL + '/images/logo.png'} 
                         alt="logo"
                         height="30px" 
@@ -88,7 +129,7 @@ export const LandingPage = () => {
                         It will be an exciting ride, so get in, Let's do this together!</span>
                         </h2>
                         <Link to='/classroom/lesson-one'>
-                            <Button>Proceed &rarr;</Button>
+                            <Button>Get Started &rarr;</Button>
                         </Link>
                     </div>                    
                 </div> 

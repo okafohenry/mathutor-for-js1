@@ -11,6 +11,12 @@ const Wrapper = styled.div`
         border-radius: 5px;
         letter-spacing: .1rem;
     }
+
+    @media only screen and (max-width: 500px) {
+       input {
+            width: 100%;
+       } 
+    }
 `
 
 export const Button = ({children, handleSubmit, disabled}) => {

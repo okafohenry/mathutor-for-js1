@@ -1,5 +1,5 @@
 html,
-body, button {
+body {
     font-family: 'Josefin Sans' !important;
     margin: 0;
     height: 100%;
@@ -15,4 +15,5 @@ ul>li{
 a {    
     text-decoration: none;
 }
+
 

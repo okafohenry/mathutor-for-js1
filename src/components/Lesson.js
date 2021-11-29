@@ -13,6 +13,12 @@ const Wrapper = styled.div`
     .nextlesson{
         margin-left: 30px;
     }
+
+    @media only screen and (max-width: 500px) {
+        width: 0;
+        display: inline;     
+    }
+    
 `
 const Container = styled.div`
     h2{
@@ -27,6 +33,12 @@ const Container = styled.div`
         padding-top: 20px;
         padding-bottom: 20px;
         line-height: 2rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .lesson-img{
+            width: 300px;
+        }
     }
 `
 
@@ -116,7 +128,7 @@ export const Lesson = ({data, nextpath, pupilClass}) => {
             <h3>{data.topic}</h3>
             <h4>{data.subTopic}</h4>
             <div className="text">{data.text1}</div>
-            <img src={data.img} alt={`${data.topic}`}  height="300px" width="500px"/>
+            <img src={data.img} alt={`${data.topic}`} className="lesson-img"  height="300px" width="500px"/>
             <div className="text">{data.text2}</div>
             <div>
                 <h3>Assessment</h3>
